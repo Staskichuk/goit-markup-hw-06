@@ -19,7 +19,7 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body>
+  <body class="page">
     <!-- Header -->
     <header class="header">
       <div class="container headeritem">
@@ -29,13 +29,13 @@
             Web<span class="logo-studio">Studio</span></a
           >
           <ul class="menu">
-            <li>
+            <li class="menu-list">
               <a class="link link-item" href="./index.html">Studio</a>
             </li>
-            <li>
+            <li class="menu-list">
               <a class="link" href="">Portfolio</a>
             </li>
-            <li>
+            <li class="menu-list">
               <a class="link" href="">Contacts</a>
             </li>
           </ul>
@@ -55,6 +55,86 @@
             </li>
           </ul>
         </address>
+        <button class="menu-open-btn" type="button" data-menu-open>
+          <svg class="menu-open-icon" width="20" height="18">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-menu" data-menu>
+        <button class="close-modal-btn" type="button" data-menu-close>
+          <svg
+            class="icon-close"
+            width="8"
+            height="8"
+            aria-label="modal close icon"
+          >
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <nav class="menu-navigation" class="is-open">
+          <ul class="menu-modal-list">
+            <li class="menu-modal-list-item">
+              <a
+                href="./index.html"
+                class="menu-modal-item-link menu-first-item"
+                >Studio</a
+              >
+            </li>
+            <li class="menu-modal-list-item">
+              <a href="" class="menu-modal-item-link">Portfolio</a>
+            </li>
+            <li class="menu-modal-list-item">
+              <a href="" class="menu-modal-item-link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <address class="menu-address-list">
+          <ul class="contacts-menu">
+            <li>
+              <a
+                href="mailto:info@devstudio.com"
+                class="menu-address-list-link menu-address-first-contact"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a href="tel:+110001111111" class="menu-address-list-link"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+          </ul>
+        </address>
+        <ul class="modal-menu-icons-list">
+          <li class="modal-menu-icon-box">
+            <a href="" class="menu-icon-list-link">
+              <svg class="socials-icons" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="modal-menu-icon-box">
+            <a href="" class="menu-icon-list-link">
+              <svg class="socials-icons" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="modal-menu-icon-box">
+            <a href="" class="menu-icon-list-link">
+              <svg class="socials-icons" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="modal-menu-icon-box">
+            <a href="" class="menu-icon-list-link">
+              <svg class="socials-icons" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <!-- Main -->
@@ -128,13 +208,18 @@
           <h2 class="title-team">Our Team</h2>
           <ul class="list-our-team">
             <li class="list-team">
-              <div class="name-employee-position">
-                <img src="./images/Mark.jpg" alt="Mark Guerrero" width="264" />
-              </div>
+              <img
+                srcset="
+                  ./images/team-card-1.jpg    1x,
+                  ./images/team-card-1@2x.jpg 2x
+                "
+                src="./images/Mark.jpg"
+                alt="Mark Guerrero"
+                width="264"
+              />
               <div class="position-three">
                 <h3 class="title-section-three">Mark Guerrero</h3>
                 <p class="list-item-team">Product Designer</p>
-
                 <ul class="social-icon">
                   <li class="social-icon-list">
                     <a class="social-icon-item-link" href="">
@@ -168,9 +253,15 @@
               </div>
             </li>
             <li class="list-team">
-              <div class="name-employee-position">
-                <img src="./images/Tom.jpg" alt="Tom Ford" width="264" />
-              </div>
+              <img
+                srcset="
+                  ./images/team-card-2.jpg    1x,
+                  ./images/team-card-2@2x.jpg 2x
+                "
+                src="./images/Tom.jpg"
+                alt="Tom Ford"
+                width="264"
+              />
               <div class="position-three">
                 <h3 class="title-section-three">Tom Ford</h3>
                 <p class="list-item-team">Frontend Developer</p>
@@ -208,13 +299,16 @@
               </div>
             </li>
             <li class="list-team">
-              <div class="name-employee-position">
-                <img
-                  src="./images/Camilia.jpg"
-                  alt="Camila Garcia"
-                  width="264"
-                />
-              </div>
+              <img
+                srcset="
+                  ./images/team-card-3.jpg    1x,
+                  ./images/team-card-3@2x.jpg 2x
+                "
+                src="./images/Camilia.jpg"
+                alt="Camila Garcia"
+                width="264"
+              />
+
               <div class="position-three">
                 <h3 class="title-section-three">Camila Garcia</h3>
                 <p class="list-item-team">Marketing</p>
@@ -252,13 +346,16 @@
               </div>
             </li>
             <li class="list-team">
-              <div class="name-employee-position">
-                <img
-                  src="./images/Daniel.jpg"
-                  alt="Daniel Wilson"
-                  width="264"
-                />
-              </div>
+              <img
+                srcset="
+                  ./images/team-card-4.jpg    1x,
+                  ./images/team-card-4@2x.jpg 2x
+                "
+                src="./images/Daniel.jpg"
+                alt="Daniel Wilson"
+                width="264"
+              />
+
               <div class="position-three">
                 <h3 class="title-section-three">Daniel Wilson</h3>
                 <p class="list-item-team">UI Designer</p>
