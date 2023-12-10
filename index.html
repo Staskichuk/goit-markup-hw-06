@@ -591,11 +591,31 @@
             </li>
             <li class="list-item-our-portfolio list-item-our-portfolio-hover">
               <div class="application-names-categories">
-                <img
-                  src="./images/Online.jpg"
-                  alt="Online Courses"
-                  width="360"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/courses-desk.jpg    1x,
+                      ./images/courses-desk@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/courses-tab.jpg    1x,
+                      ./images/courses-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/courses-mob.jpg    1x,
+                      ./images/courses-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+
+                  <img src="./images/Online.jpg" alt="Online Courses" />
+                </picture>
                 <p class="pop-up-window">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
